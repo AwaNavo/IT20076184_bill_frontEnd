@@ -1,0 +1,10 @@
+@charset "ISO-8859-1";
+
+.billCard{
+	width: 40rem !important;
+	background-color:#E9EAEC;
+	border: 1px black solid;
+	padding:20px !important;
+};
+
+
