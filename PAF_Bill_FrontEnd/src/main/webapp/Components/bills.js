@@ -9,16 +9,25 @@ $(document).ready(function(){
 	
 	$("#alertError").hide();	
 	$("#alertSearchError").hide();
+	$("#alertSearchSuccess").hide();
+	$("#divBillGrid").show();
 });
 
 //SAVE----------
 $(document).on("click","#btnSave",function(event){
 	 
-	//clear alerts
+	//clear alerts in form
 	 $("#alertSuccess").text(""); 
 	 $("#alertSuccess").hide(); 
 	 $("#alertError").text(""); 
 	 $("#alertError").hide();
+
+	//clear alerts in search form
+	 $("#alertSearchError").text(""); 
+	 $("#alertSearchError").hide();
+	 $("#alertSearchSuccess").text(""); 
+	 $("#alertSearchSuccess").hide();
+	
 
 	//form validations
 	var status = validateBillForm();
@@ -87,9 +96,20 @@ function onBillSaveComplete(response,status){
 //SEARCH----------------
 $(document).on("click","#btnSearch",function(event){
 	 
-	//clear alerts
+	//clear alerts in search form
 	 $("#alertSearchError").text(""); 
 	 $("#alertSearchError").hide();
+	 $("#alertSearchSuccess").text(""); 
+	 $("#alertSearchSuccess").hide();
+
+	//clear alerts in form
+	 $("#alertSuccess").text(""); 
+	 $("#alertSuccess").hide(); 
+	 $("#alertError").text(""); 
+	 $("#alertError").hide();
+	
+	//hide the displayed card
+	$("#divBillGrid").hide();
 
 	//form validations
 	var status = validateSearchForm();
@@ -133,6 +153,7 @@ function onBillSearchComplete(response,status){
 			 
 			//display bill card
 			$("#divBillGrid").html(resultSet.data);
+			$("#divBillGrid").show();
  
 		
 		}
@@ -168,6 +189,10 @@ $(document).on("click",".btnUpdate",function(event){
  	$("#month").val($(this).closest("div").find('p:eq(1)').text().trim().substring(7)); 
  	$("#consumeUnits").val($(this).closest("div").find('p:eq(2)').text().trim().substring(14)); 
 	
+	//hide the displayed card and displayed alert
+	$("#divBillGrid").hide();
+	$("#alertSearchSuccess").text("Required bill details update to the form.. ");
+	$("#alertSearchSuccess").show();
 });
 
 //DELETE-------------
@@ -198,28 +223,30 @@ function onBillDeleteComplete(response,status){
 		
 		if(resultSet.status.trim() == "success"){
 			
+			//hide the displayed card
+			$("#divBillGrid").hide();
 			//display success message
-			$("#alertSuccess").text("Successfully deleted."); 
- 			$("#alertSuccess").show(); 
+			$("#alertSearchSuccess").text("Successfully deleted."); 
+ 			$("#alertSearchSuccess").show(); 
  			
 		}
 		else if(resultSet.status.trim() == "error"){
 			 
-			$("#alertError").text(resultSet.data); 
- 			$("#alertError").show(); 
+			$("#alertSearchError").text(resultSet.data); 
+ 			$("#alertSearchError").show(); 
 		}
 		
 	}
 	else if(status == "error"){
 		
-		$("#alertError").text("Error while deleting."); 
- 		$("#alertError").show(); 
+		$("#alertSearchError").text("Error while deleting."); 
+ 		$("#alertSearchError").show(); 
 		
 	}
 	else{
 		
-		$("#alertError").text("Unknown Error while deleting."); 
- 		$("#alertError").show();
+		$("#alertSearchError").text("Unknown Error while deleting."); 
+ 		$("#alertSearchError").show();
 		
 	}
 }

@@ -102,7 +102,7 @@
 	<br/>
 	<!-- Search Error Alert -->
 	<div id="alertSearchError" class="alert alert-danger col-md-3 offset-md-3"></div><br/>
-	
+	<div id="alertSearchSuccess" class="alert alert-success col-md-4 offset-md-3"></div><br/>
 	
 	<!-- Card Result -->			
 	<br>
