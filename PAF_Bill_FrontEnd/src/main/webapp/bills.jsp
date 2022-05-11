@@ -15,11 +15,11 @@
 	</head>
 	
 	<body>
-	
+	<img src="Images/bg2.jpg"  class="img-fluid" alt="Responsive image" style="height:150px; width:100%;" >
 	<br/>
 	<br/>
 	<div class = "row">
-		<div class = "col-md-5 offset-md-3">
+		<div class = "container col-md-5 offset-md-3">
 		<h1>Bill Management</h1>
 		</div>
 	</div>
@@ -27,7 +27,7 @@
 	
 	<!-- FORM -->
 	<div class = "row" style = "background-color:#EEEDE7 !important; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
-		<div class = "col-md-5 offset-md-3">
+		<div class = "container col-md-5 offset-md-3">
 			<form id = "formBill" name ="formBill" >
 				 <br/><br/>				
 				 <h6>Account No: </h6>
@@ -50,10 +50,10 @@
 		<!-- ALERT -->
 		<br/>
 		<!-- Error Alert -->
-		<div id="alertError" class="alert alert-danger col-md-3 offset-md-3"></div><br/>	
+		<div id="alertError" class="alert alert-danger container col-md-3 offset-md-3"></div><br/>	
 		
 		<!-- Success Alert -->				
-		<div id="alertSuccess" class="alert alert-success col-md-3 offset-md-3"></div>
+		<div id="alertSuccess" class="alert alert-success container col-md-3 offset-md-3"></div>
 		<br/>
 	</div>
 	
@@ -62,17 +62,17 @@
 	<br/>
 	
 	<div class = "row">
-		<div class = "col-md-5 offset-md-3">
-			<h4>Search Bill...  <i class="fa fa-search" aria-hidden="true"></i></h4>
+		<div class = "container col-md-5 offset-md-3">
+			<h3>Search Bill...  <img src="Images/Bg1.png"  class="img-fluid" alt="Responsive image" style = "width:40px !important; height:40px !important;"></h3>
 		</div>
 	</div>
 	<br/>
-	<img src="Images/Bg1.png"  class="img-fluid col-md-5 offset-md-8" alt="Responsive image" style = "width:120px !important; height:80px !important;">
+	
 	<br/><br/>
 	<!-- Search Field -->
   	<div class = "row">
 		<br/>
-		<div class = "col-md-6 offset-md-3">
+		<div class = "container col-md-6 offset-md-3">
 		<form id = "searchFormBill" name ="searchFormBill" style = "background-color:#EEEDE7 !important; padding: 20px !important; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">			
 			<div class = "form-row">	
 				<div class="form-group col-md-3 ">
@@ -101,16 +101,17 @@
 	
 	<br/>
 	<!-- Search Error Alert -->
-	<div id="alertSearchError" class="alert alert-danger col-md-3 offset-md-3"></div><br/>
-	<div id="alertSearchSuccess" class="alert alert-success col-md-4 offset-md-3"></div><br/>
+	<div id="alertSearchError" class="alert alert-danger container col-md-3 offset-md-3"></div><br/>
+	<div id="alertSearchSuccess" class="alert alert-success container col-md-4 offset-md-3"></div><br/>
 	
 	<!-- Card Result -->			
 	<br>
 	<br/>
 	<div class = "row">	
-		<div class = "col-md-8 offset-md-3" id = "divBillGrid"> </div>
+		<div class = "container col-md-8 offset-md-3" id = "divBillGrid"> </div>
 	</div>
 	<br/><br/>
+	<img src="Images/bg4.png"  class="img-fluid" alt="footer image" style="height:150px; width:100%;" >
 	<!-- END -->
 	
 	</body>

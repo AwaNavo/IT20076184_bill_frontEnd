@@ -110,6 +110,9 @@ $(document).on("click","#btnSearch",function(event){
 	
 	//hide the displayed card
 	$("#divBillGrid").hide();
+	
+	//clear older form values if exist
+	$("#formBill")[0].reset();
 
 	//form validations
 	var status = validateSearchForm();
