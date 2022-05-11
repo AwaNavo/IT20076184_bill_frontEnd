@@ -111,7 +111,7 @@
 		<div class = "col-md-8 offset-md-3" id = "divBillGrid"> </div>
 	</div>
 	<br/><br/>
-	
+	<!-- END -->
 	
 	</body>
 </html>
